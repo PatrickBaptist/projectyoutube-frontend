@@ -17,7 +17,6 @@ export const ContainerSliders = styled.div`
     flex-wrap: nowrap;
     align-items: center;
     overflow: hidden;
-    z-index: -1;
 `
 
 export const NavUl = styled.nav<{$openMenu: boolean}>`

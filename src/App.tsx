@@ -10,15 +10,18 @@ import { UserStorage } from "./contextApi/usersContext";
 import Login from "./components/pages/login";
 import Search from "./components/pages/search";
 import SignUp from "./components/pages/sign-up";
+import YourVideos from "./components/pages/your-videos";
 
 function App() {
 
   return (
   <BrowserRouter>
     <UserStorage>
+
+      
     <div className="App">
       <Header />
-      <div style={{ width: '100%', display: 'flex' }}>
+      <div className="container" style={{ width: '100%', display: 'flex' }}>
 
         <Menu />
 
@@ -32,6 +35,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/search' element={<Search />} />
             <Route path='/sign-up' element={<SignUp />} />
+            <Route path="/yourvideos" element={<YourVideos />} />
           </Routes>
 
         </div>

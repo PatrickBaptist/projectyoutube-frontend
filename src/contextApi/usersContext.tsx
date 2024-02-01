@@ -20,8 +20,8 @@ export const UserStorage = ({children} : any) => {
         })
       }
     
-      const createVideos = (token: string, user_id: string, title: string, description: string, thumbnail: string, publishedAt: Date) => {
-        api.post('/videos/create-video', {user_id, title, description, thumbnail, publishedAt}, {headers: {Authorization: token}})
+      const createVideos = (token: string, user_id: string, tittle: string, description: string, thumbnail: string, publishedAt: Date) => {
+        api.post('/videos/create-video', {user_id, tittle, description, thumbnail, publishedAt}, {headers: {Authorization: token}})
         .then(() => {
           alert('Video enviado com sucesso!')
           getUser(token)
@@ -32,10 +32,10 @@ export const UserStorage = ({children} : any) => {
       }
 
     const getUser = (token: string) => {
-
         api.get('/user/get-user', {headers: {Authorization: token}}).then(({ data }) => {
             setUser(data.user)
             setLogin(true)
+            getVideos(token, data.user.id)
         }).catch((error) => {
             console.log('Usuário não autenticado', error)
         })

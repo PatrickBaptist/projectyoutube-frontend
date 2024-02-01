@@ -24,6 +24,7 @@ export const Container = styled.header`
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 1;
 `;
 
 export const LogoContainer = styled.div`
@@ -278,8 +279,9 @@ export const DropDownMenu = styled.div<ContainerProps>`
   box-sizing: border-box;
   box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.1);
   position: absolute;
-  top: 90px;
-  right: 80px;
+  top: 10px;
+  right: 120px;
+  z-index: 202020202020202020020;
 
   @media(max-width: 375px) {
     right: 70px;

@@ -117,7 +117,7 @@ function Login() {
           ref={passwordRef}
           $validPassword={validPassword}
           placeholder="Senha"
-          maxLength={8} 
+          maxLength={8}
         />
         <MessageContainer>
           <InvalidPasswordMessage $invalid={validPassword}>
