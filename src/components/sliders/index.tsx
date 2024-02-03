@@ -46,9 +46,9 @@ function Sliders(){
   }
 
     return(
-      <Container $openMenu={openMenu}>
+      <Container>
           <ButtonIcon alt="button slider" src={Slider} style={{transform: 'scaleX(-1)'}} onClick={buttonBack}/>
-        <ContainerSliders>
+        <ContainerSliders $openMenu={openMenu}>
 
             <NavUl $openMenu={openMenu} style={{transform: `translateX(${
               sliderPosition}px)`}}>

@@ -46,6 +46,10 @@ export const ButtonContainer = styled.div<{ $margin?: string, $responsive688?: b
         background-color: ${({theme}) => theme.colors.bgColor};
     }
 
+    @media(max-width: 759px) {
+    display: none;
+  }
+
     ${props =>
     props.$responsive688 &&
     css`

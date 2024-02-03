@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App-style"
 import Header from "./components/header";
 import Menu from "./components/menu";
 import Home from "./components/pages/home";
@@ -11,6 +12,7 @@ import Login from "./components/pages/login";
 import Search from "./components/pages/search";
 import SignUp from "./components/pages/sign-up";
 import YourVideos from "./components/pages/your-videos";
+import { Container, ContainerRoutes } from "./App-style";
 
 function App() {
 
@@ -21,11 +23,13 @@ function App() {
       
     <div className="App">
       <Header />
-      <div className="container" style={{ width: '100%', display: 'flex' }}>
+      
+      <Container>
+
 
         <Menu />
 
-        <div style={{width: '100%', padding: '0px 70px 50px 70px', boxSizing: 'border-box', display: 'flex', justifyContent: 'center'}}>
+        <ContainerRoutes>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/shorts' element={<Shorts />} />
@@ -38,11 +42,13 @@ function App() {
             <Route path="/yourvideos" element={<YourVideos />} />
           </Routes>
 
-        </div>
+        </ContainerRoutes>
 
-      </div>
-
+      </Container>
+    
+    
     </div>
+    
     </UserStorage>
   </BrowserRouter>
   );

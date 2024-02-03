@@ -4,17 +4,23 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     box-sizing: border-box;
+    gap: 8px;
+
+    @media(max-width: 1015px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  `
+
+export const TitleContainer = styled.div`
+    width: 100%;
 `
+
 export const ImageBanner = styled.img`
     width: 100%;
     height: 300px;
     border-radius: 12px;
     cursor: pointer;
-`
-
-export const TitleContainer = styled.div`
-    width: 100%;
-    padding: 5px;
 `
 
 export const TextContainer = styled.div`

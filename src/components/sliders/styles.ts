@@ -1,22 +1,42 @@
 import styled from 'styled-components'
 
-export const Container = styled.div<{$openMenu: boolean}>`
-    width: ${({ $openMenu }) => $openMenu?'70vw' : '84vw'};
-    max-width: 1600px;
+export const Container = styled.div`
+    width: 100%;
+    height: auto;
     background-color: white;
     position: fixed;
     display: flex;
     align-items: center;
 `
 
-export const ContainerSliders = styled.div`
-    height: 70%;
+export const ContainerSliders = styled.div<{$openMenu: boolean}>`
+    width: 88%;
     display: flex;
     justify-content: flex-start;
     column-gap: 20px;
     flex-wrap: nowrap;
     align-items: center;
     overflow: hidden;
+
+    @media(max-width: 1250px) {
+        width: 86%;
+  }
+
+  @media(max-width: 1075px) {
+        width: 85%;
+  }
+
+  @media(max-width: 1000px) {
+        width: 82%;
+  }
+
+  @media(max-width: 1000px) {
+        width: 80%;
+  }
+
+  @media(max-width: 759px) {
+        width: 100%;
+  }
 `
 
 export const NavUl = styled.nav<{$openMenu: boolean}>`
@@ -24,7 +44,7 @@ export const NavUl = styled.nav<{$openMenu: boolean}>`
     align-items: center;
     justify-content: flex-start;
     column-gap: 20px;
-    height: 70%;
+    height: auto;
     transition: 0.5s ease-in-out;
 `
 

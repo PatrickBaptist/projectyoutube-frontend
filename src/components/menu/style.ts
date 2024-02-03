@@ -14,6 +14,15 @@ export const Container = styled.div<{$openmenu: boolean}>`
     z-index: 2020;
     background-color: white;
     transition: 0.3s;
+
+    @media(max-width: 759px) {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        position: sticky;
+        top: none;
+        bottom: 0;
+  }
 `
 
 export const MenuItem1 = styled.div<{$openmenu: boolean}>`
